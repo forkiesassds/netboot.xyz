@@ -21,11 +21,9 @@ goto mirrorcfg
 
 :older_release
 set older_release true
-set ubuntu_mirror {{ releases.ubuntu.archive_mirror }}
-echo Setting mirror to ${ubuntu_mirror}
 clear ubuntu_version
 echo -n Please set enter code name of release: ${} && read ubuntu_version
-set dir ${ubuntu_base_dir}/dists/${ubuntu_version}-updates/main/installer-${arch_a}/current/images/netboot/
+set dir ${ubuntu_base_dir}/dists/${ubuntu_version}/main/installer-${arch_a}/current/images/netboot/
 goto deb_boot_type
 
 :mirrorcfg
